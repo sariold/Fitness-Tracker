@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/Fitness-Tracker/static/css/main.6466e46e.css",
-    "main.js": "/Fitness-Tracker/static/js/main.d3306104.js",
-    "index.html": "/Fitness-Tracker/index.html",
-    "main.6466e46e.css.map": "/Fitness-Tracker/static/css/main.6466e46e.css.map",
-    "main.d3306104.js.map": "/Fitness-Tracker/static/js/main.d3306104.js.map"
+    "main.css": "/static/css/main.6466e46e.css",
+    "main.js": "/static/js/main.d3306104.js",
+    "index.html": "/index.html",
+    "main.6466e46e.css.map": "/static/css/main.6466e46e.css.map",
+    "main.d3306104.js.map": "/static/js/main.d3306104.js.map"
   },
   "entrypoints": [
     "static/css/main.6466e46e.css",
