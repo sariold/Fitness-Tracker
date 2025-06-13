@@ -7,7 +7,6 @@
   --color-text-muted: #6b7280;
   --color-grid: #e5e7eb;
 
-  /* Added missing variables */
   --color-bg: #fff;
   --color-bg-alt: #f9fafb;
   --color-border: #d1d5db;
@@ -20,7 +19,6 @@
   box-sizing: border-box;
 }
 
-/* Utility classes */
 .no-select {
   user-select: none;
 }
@@ -45,13 +43,15 @@ body {
 }
 
 .appContainer {
-  width: 960px;
+  max-width: 960px;
   background-color: var(--color-bg-alt);
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  padding: 30px 40px;
+  padding: 10px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .header {
@@ -71,7 +71,8 @@ body {
 .chartContainer {
   background-color: var(--color-bg);
   border-radius: 16px;
-  padding: 30px;
+  /* padding: 30px; */
+  padding: 5%;
   box-shadow: inset 0 0 15px var(--color-primary-light);
 }
 
@@ -105,7 +106,6 @@ body {
     calc(100% - 15px) calc(1em + 2px), calc(100% - 25px) 0.5em;
   background-size: 5px 5px, 5px 5px, 1px 1.5em;
   background-repeat: no-repeat;
-  /* transition moved to class */
 }
 .exerciseSelect:hover,
 .exerciseSelect:focus {
@@ -128,7 +128,6 @@ body {
 .resetZoomBtn,
 .exerciseSelectLabel,
 .header h1 {
-  /* Apply user-select none */
   user-select: none;
 }
 
@@ -204,7 +203,6 @@ body {
   border-color: var(--color-primary);
   outline: none;
   box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
-  /* use transition class */
 }
 
 .resetZoomBtn {
@@ -218,19 +216,33 @@ body {
   cursor: pointer;
   user-select: none;
   height: 42px;
-  align-self: flex-start;
+  align-self: flex-end;
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
-  /* use transition class */
 }
 .resetZoomBtn:hover {
   background-color: #2563eb;
   box-shadow: 0 6px 16px rgba(37, 99, 235, 0.6);
 }
 
-/* Add transition classes where needed */
 .exerciseSelect,
 .dateInput,
 .resetZoomBtn {
   transition: border-color var(--transition-fast),
     box-shadow var(--transition-fast);
 }
+
+.chartContainer {
+  width: 100%;
+  overflow-x: auto;
+  min-height: 300px;
+}
+
+.chartContainer canvas {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 400px;
+}
+
+/* * {
+  outline: 1px solid red;
+} */

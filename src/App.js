@@ -138,7 +138,7 @@ export default function App() {
         yAxisID: "y",
         pointRadius: 5,
         pointHoverRadius: 7,
-        fill: true,
+        fill: false,
       },
       {
         label: "Top Set Weight (LB)",
@@ -151,13 +151,14 @@ export default function App() {
         yAxisID: "y",
         pointRadius: 5,
         pointHoverRadius: 7,
-        fill: true,
+        fill: false,
       },
     ],
   };
 
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
     animation: {
       duration: 1000,
       easing: "easeOutQuart",
@@ -178,7 +179,7 @@ export default function App() {
       },
       tooltip: {
         enabled: true,
-        mode: "nearest",
+        mode: "index",
         intersect: false,
         backgroundColor: "rgba(31, 41, 55, 0.9)",
         titleColor: "#3b82f6",
@@ -259,7 +260,7 @@ export default function App() {
   return (
     <div className={styles.appContainer}>
       <header className={styles.header}>
-        <h1>Workout Weight Comparison</h1>
+        <h1>Fitness Tracker</h1>
       </header>
 
       {error && <p className={styles.errorMessage}>Error: {error}</p>}
