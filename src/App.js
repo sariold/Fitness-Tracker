@@ -82,11 +82,35 @@ export default function App() {
                 row["Date (yyyy/mm/dd)"] &&
                 row["Exercise"] !== "Shoes"
             );
+            const nameCorrections = {
+              "Cable Flyes": "Cable Fly",
+              "Calf Raises": "Standing Calf Raise",
+              "Chest-Supported T-Row": "Chest-Supported T-Bar Row",
+              "T-Bar Row": "Chest-Supported T-Bar Row",
+              "Hip Adduction": "Hip Adductors",
+              "Hip Abduction": "Hip Abductors",
+              "Rear Cable Flyes": "Rear Cable Fly",
+              "Rear Delt Fly": "Rear Cable Fly",
+              "Single-Arm Cable Curl": "Bayesian Cable Curl",
+              "Machine Bicep Curl": "Machine Preacher Curl",
+              "Pec Deck Fly": "Pec Deck",
+              "Pec Fly": "Pec Deck",
+              "Machine Shrugs": "Machine Shrug",
+              "Kneeling Leg Curls": "Kneeling-Leg Curls",
+              "Lat Pullover": "Cable Lat Pullover",
+              "Dumbbell Supinated Curl": "Supinated Dumbbell Curl",
+              "Single-Leg Extension": "Single-Leg Leg Extension",
+              "Single-Arm Rope Tricep Extension": "Single-Arm Tricep Pushdown",
+              "Single-Arm Rope Tricep Pushdown": "Single-Arm Tricep Pushdown",
+              "Single-Arm Tricep Pressdown": "Single-Arm Tricep Pushdown",
+              "Single-Arm Tricep Extension":
+                "Single-Arm Tricep Overhead Extension",
+            };
+
             const renamed = filtered.map((row) => {
-              if (row["Exercise"] === "Machine Shrugs") {
-                return { ...row, Exercise: "Machine Shrug" };
-              }
-              return row;
+              const original = row["Exercise"];
+              const corrected = nameCorrections[original];
+              return corrected ? { ...row, Exercise: corrected } : row;
             });
             const uniqueExercises = [
               ...new Set(renamed.map((r) => r["Exercise"])),
@@ -309,12 +333,6 @@ export default function App() {
       ) : (
         <p className={styles.loadingText}>Loading workout data...</p>
       )}
-
-      <footer className={styles.footer}>
-        {" "}
-        &copy; Diego Renzo Sariol. <br />
-        All rights reserved
-      </footer>
     </div>
   );
 }
