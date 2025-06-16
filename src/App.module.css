@@ -39,7 +39,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 40px 0;
+  /* padding: 40px 0; */
 }
 
 .appContainer {
@@ -56,7 +56,7 @@ body {
 
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-bottom: 30px;
 }
@@ -74,6 +74,10 @@ body {
   /* padding: 30px; */
   padding: 5%;
   box-shadow: inset 0 0 15px var(--color-primary-light);
+  width: 100%;
+  overflow-x: auto;
+  min-height: 300px;
+  /* max-height: 500px; */
 }
 
 .exerciseSelectLabel {
@@ -107,6 +111,7 @@ body {
   background-size: 5px 5px, 5px 5px, 1px 1.5em;
   background-repeat: no-repeat;
 }
+
 .exerciseSelect:hover,
 .exerciseSelect:focus {
   border-color: var(--color-primary);
@@ -198,6 +203,7 @@ body {
   color: var(--color-text);
   cursor: pointer;
 }
+
 .dateInput:hover,
 .dateInput:focus {
   border-color: var(--color-primary);
@@ -219,6 +225,7 @@ body {
   align-self: flex-end;
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
 }
+
 .resetZoomBtn:hover {
   background-color: #2563eb;
   box-shadow: 0 6px 16px rgba(37, 99, 235, 0.6);
@@ -231,18 +238,36 @@ body {
     box-shadow var(--transition-fast);
 }
 
-.chartContainer {
+/* .chartContainer {
   width: 100%;
   overflow-x: auto;
   min-height: 300px;
-}
+} */
 
 .chartContainer canvas {
   width: 100% !important;
   height: 100% !important;
-  min-height: 400px;
+  /* min-height: 400px; */
+  max-height: 400px;
 }
 
 /* * {
   outline: 1px solid red;
 } */
+
+/* @media (max-width: 640px) {
+  .controlsRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .resetZoomBtn {
+    align-self: stretch;
+    width: 100%;
+  }
+} */
+
+.controlsRow > * {
+  flex: 1 1 250px; /* Or whatever minimum width makes sense */
+  min-width: 250px;
+}

@@ -79,13 +79,20 @@ export default function App() {
                 row["Body Weight (LB)"] &&
                 row["Top Set (Reps×LB)"] &&
                 row["Exercise"] &&
-                row["Date (yyyy/mm/dd)"]
+                row["Date (yyyy/mm/dd)"] &&
+                row["Exercise"] !== "Shoes"
             );
+            const renamed = filtered.map((row) => {
+              if (row["Exercise"] === "Machine Shrugs") {
+                return { ...row, Exercise: "Machine Shrug" };
+              }
+              return row;
+            });
             const uniqueExercises = [
-              ...new Set(filtered.map((r) => r["Exercise"])),
+              ...new Set(renamed.map((r) => r["Exercise"])),
             ].sort();
             setExercises(uniqueExercises);
-            setData(filtered);
+            setData(renamed);
 
             const dates = filtered
               .map((r) => parseDate(r["Date (yyyy/mm/dd)"]))
@@ -283,10 +290,8 @@ export default function App() {
                 setDateRange((dr) => ({ ...dr, to: e.target.value }))
               }
             />
-
             <ResetZoomButton onClick={resetZoom} />
           </div>
-
           {selectedExercise && filteredData.length > 0 ? (
             <div className={styles.chartContainer}>
               <Line ref={chartRef} data={chartData} options={options} />
