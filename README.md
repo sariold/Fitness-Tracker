@@ -1,36 +1,52 @@
-# Fitness Tracker
+# 🏋️‍♂️ Fitness Tracker
 
-A React web app that visualizes workout progress by charting body weight and top set weights over time for various exercises.
+A responsive **React web app** that helps you visualize your **workout progress** over time by charting **body weight** and **top set weights** for various exercises. 📈
 
-## Technologies Used
+---
 
-- React with functional components and hooks for dynamic UI  
-- PapaParse for efficient CSV parsing of workout data  
-- Chart.js and react-chartjs-2 for interactive line charts with zoom and pan features  
-- CSS Modules for scoped styling  
-- Google Sheets CSV as a data source for flexible updates without redeployment  
+## 🛠️ Technologies Used
 
-## Features
+- ⚛️ **React** (functional components + hooks) for dynamic UI
+- 📄 **PapaParse** to efficiently parse CSV workout data
+- 📊 **Chart.js** + `react-chartjs-2` for beautiful, interactive line graphs
+- 🎨 **CSS Modules** for modular and scoped styling
+- 🧮 **Google Sheets CSV** as a live data source — update your workouts without redeploying!
 
-- Fetches and parses workout data from a live Google Sheets CSV  
-- Allows selection of exercise and custom date ranges  
-- Interactive chart displaying body weight and top set weight trends  
-- Zoom and pan support on charts for detailed analysis  
-- Handles data loading errors and empty states gracefully  
+---
 
-## Setup
+## ✨ Features
 
-1. Clone the repo  
-2. Run `npm install` to install dependencies  
-3. Run `npm start` to launch the app locally  
+- 🔗 **Live CSV import** from Google Sheets for real-time updates
+- 🎯 **Exercise selector** and **custom date range filters**
+- 📈 Dual-axis charts showing **body weight** and **top set trends**
+- 🔍 **Zoom & Pan** functionality for detailed analysis
+- 🚧 Handles **loading states**, **missing data**, and **errors** gracefully
 
-## Challenges & Solutions
+---
 
-Parsing and normalizing inconsistent exercise names from CSV data required creating a mapping dictionary to unify naming conventions. Implemented performant filtering and sorting of data inside React state hooks to support responsive updates on user interaction.
+## 🧰 Setup
 
-## What I Learned
+1. 📥 Clone this repo  
+2. 🧩 Run `npm install` to install dependencies  
+3. ▶️ Run `npm start` to launch locally in your browser  
 
-- Advanced data visualization techniques with Chart.js, including time-based scales and zoom plugin integration  
-- Managing asynchronous CSV data fetching and parsing in React  
-- Designing clean and responsive UI components with React hooks and CSS Modules  
-- Handling edge cases in data transformation and user input control  
+---
+
+## 🧠 Challenges & Solutions
+
+🚧 Workout data often had inconsistent names like `"Bench Press"` vs `"Flat Bench"` — so I created a **mapping dictionary** to unify naming conventions.
+
+⚡️ Ensured smooth filtering and date handling with performant state management using React hooks.
+
+---
+
+## 📚 What I Learned
+
+- 🎯 Advanced chart techniques with **Chart.js** (zoom, pan, responsive time axes)
+- 🔄 Async CSV fetching + parsing and state syncing in React
+- 🎨 UI design using **React hooks** and **modular CSS**
+- 🧪 Edge-case handling for user inputs and transforming raw workout data
+
+---
+
+💪 **Track your progress. Analyze your gains. All in your browser.**
