@@ -333,6 +333,22 @@ export default function App() {
       ) : (
         <p className={styles.loadingText}>Loading workout data...</p>
       )}
+
+      <footer className={styles.footer}>
+        <a
+          href="https://github.com/sariold/Fitness-Tracker"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.footerLink}
+        >
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+            alt="GitHub"
+            className={styles.githubIcon}
+          />
+          View on GitHub
+        </a>
+      </footer>
     </div>
   );
 }
