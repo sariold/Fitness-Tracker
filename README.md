@@ -34,7 +34,7 @@ A responsive **React web app** that helps you visualize your **workout progress*
 
 ## 🧠 Challenges & Solutions
 
-🚧 Workout data often had inconsistent names like `"Bench Press"` vs `"Flat Bench"` — so I created a **mapping dictionary** to unify naming conventions.
+🚧 Workout data often had inconsistent names like `"Cable Fly"` vs `"Cable Flyes` — so I created a **mapping dictionary** to unify naming conventions.
 
 ⚡️ Ensured smooth filtering and date handling with performant state management using React hooks.
 
