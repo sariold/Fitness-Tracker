@@ -62,7 +62,7 @@ export default function App() {
 
   useEffect(() => {
     fetch(
-      "https://docs.google.com/spreadsheets/d/e/2PACX-1vSUnCxkoLIN27KGkhcOlsuJysQkibnjMoP8p_pF1Ik3gpLihKyGQQEIZ8gHqAVtsug37172EiTemRui/pub?gid=1438255772&single=true&output=csv"
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vR5s1pvX5oHpreW2KyYOhpS3h6TLM-ZO-DpBhnXxPO7gzfXfXlakUgINuUNhsobESoR0tdz34p6rxE9/pub?gid=1438255772&single=true&output=csv"
     )
       .then((res) => {
         if (!res.ok) throw new Error("Failed to load workouts.csv");
